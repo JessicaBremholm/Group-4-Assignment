@@ -14,3 +14,12 @@ Please use branches accordingly. For all new changes, branch off of `master` and
 
 ## File structure
 All the functionality is in `assets/js/request.js`. I've tried to add as many comments as possible to explain what I've built.
+
+## Naming conventions. Using BEM (block implementation technologies) or a simplified version of it. 
+Names are written in lowercase Latin letters. Words are separated by a hyphen (-). 
+The element name is separated from the block name by a double underscore (__). 
+The modifier value is separated from the modifier name by double hyphen(--).
+Ex. 
+<section class.”card card–light>
+  <img class=”card__img” src” ”>
+  <h1 class=”card__title>
