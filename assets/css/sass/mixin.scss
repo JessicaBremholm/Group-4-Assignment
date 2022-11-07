@@ -1,0 +1,72 @@
+/*! MIXIN  */
+
+/*Transitions*/
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@-webkit-keyframes moveUp {
+  0% { }
+  100% { -webkit-transform: translateY(0); opacity: 1;}
+}
+
+@keyframes moveUp {
+  0% { }
+  100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+}
+
+/*Moving up fade in animation*/
+.moveUp {
+  opacity:0;
+  -webkit-transform: translateY(200px); /*Taken from mixin.scss*/
+  transform: translateY(200px) ; /*Taken from mixin.scss*/
+  -moz-transform: translateY(200px); /*Taken from mixin.scss*/
+  -moz-animation:  moveUp 1s ease forwards; /*Taken from mixin.scss*/
+  -webkit-animation: moveUp 1s ease forwards; /*Taken from mixin.scss*/
+  animation: moveUp 1s ease forwards; /*Taken from mixin.scss*/
+}
+
+/*Buttons*/
+.btn {
+  float:right;
+  position: relative;
+  padding: 10px;
+  width: auto;
+  border-radius: 9px;
+  cursor: pointer;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: $primary-color;
+  font-weight: bold;
+  color: white !important;
+  @include transition(all .3s); /*Taken from mixin.scss*/
+
+  &:hover {
+    padding-right: 30px;
+    background:$link-hover;
+  }
+
+  &:before {
+    content: "→";
+    position: absolute;
+    height: 100%;
+    font-size: 125%;
+    line-height: 2;
+    color: #fff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    right: -20px;
+    top: 0;
+    opacity:0;
+  }
+
+  &:hover:before {
+    right: 8px;
+    opacity:1;
+  }
+}

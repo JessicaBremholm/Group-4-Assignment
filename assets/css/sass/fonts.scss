@@ -1,0 +1,88 @@
+/*! TYPOGRAPHY  */
+
+$primary-font:       'Playfair Display', serif;
+$secondary-font:      'Open Sans', sans-serif;
+
+/* --- Convert percent font sizes to em ---*/
+@mixin font-size($sizeValue: 12 ) {
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: (0.0625 * $sizeValue) + rem;
+}
+
+@mixin line-height($heightValue: 20 ) {
+  line-height: $heightValue + px; //fallback for old browsers
+  line-height: (0.0625 * $heightValue) + rem;
+}
+
+@mixin size($sizeValue: 12, $heightValue: 20) {
+  @include font-size($sizeValue);
+  @include line-height($heightValue);
+}
+
+
+html, .paragraph, p {
+  font: {
+    family:$secondary-font;
+    weight: normal;
+  }
+	margin-top: 10px;
+	@include size(15, 20);
+  color:black;
+
+  strong,b {
+    font-weight: bold;
+  }
+}
+
+strong,b {
+	font-weight: bold;
+}
+
+i, em {
+	font-style: italic;
+}
+
+ul {
+ 	list-style-type: none;
+	list-style-image: none;
+}
+
+li {
+ 	list-style-type: none;
+	list-style-image: none;
+  @extend .paragraph;
+  margin-top:5px;
+}
+
+h1 {
+  font: {
+    family:$secondary-font;
+   	weight: bold;
+  }
+	@include size(30, 35);
+}
+
+
+h2 {
+  font: {
+    family:$primary-font;
+   	weight: normal;
+  }
+	@include size(20, 25);
+}
+
+/*------LINKS-----*/
+
+a {
+	color:$link;
+	text-decoration:none;
+  @include transition(.5s); /*Taken fomr mixin.scss*/
+  cursor:pointer;
+
+  &:hover,
+  &:active,
+  &:visited {
+  	color:$link-hover;
+  	text-decoration:none;
+  }
+}

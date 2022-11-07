@@ -1,0 +1,139 @@
+/*! HEADER STYLES */
+
+#header {
+  margin: -2% -1% 0 -1%;
+  width: 102%;
+  height: 100px;
+  overflow: hidden;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  background: white;
+
+  /*Breakpoint for when menu can't fit the screen anymore*/
+  @media screen and (max-width: 1190px) {
+    padding: 2%;
+    box-sizing: border-box;
+    height: auto;
+    position: relative;
+  }
+
+  #branding {
+    padding: 1%;
+    box-sizing: border-box;
+    height: 100%;
+    display:inline-block;
+    vertical-align: middle;
+
+    /*Breakpoint for when menu can't fit the screen anymore*/
+    @media screen and (max-width: 1190px) {
+      height:auto;
+      width: 20%;
+      max-width: 90px;
+
+      img {
+        height: auto !important;
+        width: 100% !important;
+      }
+    }
+
+    /*#bradning img*/
+    img {
+      height: 100%;
+      width: auto;
+      display: block;
+    }
+  }
+
+  /*#header h1*/
+  h1 {
+    vertical-align: middle;
+    display:inline-block;
+  }
+
+  nav#menu {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    text-align: right;
+    min-width: 60%;
+
+    /*Breakpoint for when menu can't fit the screen anymore*/
+    @media screen and (max-width: 1190px) {
+      min-width: auto;
+      max-height: 0px;
+      @include transition(1s); /*Taken fomr mixin.scss*/
+
+      li {
+        display: none !important;
+      }
+
+      /*Open menu*/
+      &.responsive {
+        width: 100%;
+        max-height: 1000px;
+        @include transition(1s); /*Taken fomr mixin.scss*/
+
+        li:not(:last-child) {
+          float: none;
+          display: block !important;
+          text-align: left;
+          padding: 1% 0;
+          border-top: 1px solid $light-grey;
+        }
+      }
+    }/*Close @media screen and (max-width: 1190px)*/
+
+    ul {
+      display:block;
+
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0 1%;
+
+        a.current {
+          color:$link-hover;
+        }
+
+        &.icon {
+          display: none;
+        }
+
+        &.search input#searchInput {
+          background-image: url('../searchicon.png');
+          background-position: 4px 7px;
+          background-repeat: no-repeat;
+          width: 113px;
+          background-size: 15px auto;
+          box-sizing: border-box;
+          padding: 5px 5px 5px 22px;
+          border: 1px solid $light-grey;
+          margin-bottom: 12px;
+          @extend .paragraph;
+          box-shadow: 0 0 0 transparent;
+
+          &:focus {
+            box-shadow: 0 0 5px $link;
+            @include transition(0.3s);
+          }
+        }
+
+        /*Breakpoint for when menu can't fit the screen anymore*/
+        @media screen and (max-width: 1190px) {
+          &.icon {
+            float: right;
+            display: inline-block !important;
+            position: absolute;
+            right: 2%;
+            top: 30px;
+
+            a {
+              font-size:20px;
+            }
+          }
+        }/*@media screen and (max-width: 1190px)*/
+      }/*Close li*/
+    } /*Close ul*/
+  } /*Close nav#menu*/
+} /*Close #header*/

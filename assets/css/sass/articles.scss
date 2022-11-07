@@ -1,0 +1,200 @@
+/*! ARTICLE STYLES */
+
+article#article {
+  overflow: hidden;
+  position: relative;
+  width: 31%;
+  float:left;
+  margin: 10px 1%;
+  max-height:200px;
+
+  /*Breakpoints for responsive grid system*/
+  @media (min-width : 461px) and (max-width : 870px) {
+    width: 48% !important;
+  }
+
+  @media (max-width : 460px) {
+    width: 98% !important;
+    max-height: none;
+  }
+
+  /*The first and largest article*/
+  &.article-0 {
+    width: 64%;
+    max-height: none;
+
+    .info p {
+      color:white;
+    }
+
+    .description, .btn {
+      display:block !important;
+
+      /*Don't show buttons on most articles since it takes a lot of space*/
+      @media (max-width : 460px) {
+        display: none !important;
+      }
+    }
+
+    .author {
+      display: inline-block !important;
+    }
+
+    img {
+      height: 520px;
+
+      /*Make image shorter on mobile phones*/
+      @media (max-width : 460px) {
+        max-height: 200px !important;
+      }
+    }
+  } /*Close .article-0*/
+
+  /*Styling of smallest articles in 'sidebar'*/
+  &.article-2,
+  &.article-3,
+  &.article-4 {
+    border-top: 1px solid $light-grey;
+    padding-top: 10px;
+    margin-top: 0;
+    height:86px;
+
+    .img-link {
+      float: left;
+      width: 40%;
+      display: block;
+      clear: none;
+
+      img {
+        height: 86px;
+      }
+    }
+
+    .info {
+      width: 60%;
+      float: left;
+      background: none;
+      position: relative;
+      clear: none;
+      padding: 0 0 0 3%;
+      height: 86px;
+
+      .date-author {
+        display:none;
+      }
+
+      h2 {
+        @include size(14, 16);
+        font-weight: 700;
+      }
+
+      a {
+        color: black !important;
+      }
+    }
+  }
+
+  img {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+  }
+
+  .info {
+    width:100%;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    bottom: 0;
+    clear: both;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 2%;
+    display: block;
+
+    .date-author {
+      display: block;
+      margin-top: 0;
+      color:white;
+    }
+
+    a {
+      color: white;
+    }
+
+    .description, .btn {
+      display:none;
+    }
+  }/*Close .info*/
+
+  &.hide {
+    opacity: 0;
+    position: absolute;
+  }
+
+  &.show {
+    opacity: 1;
+    display: block;
+    margin: 10px 1%;
+    border-top: none;
+    padding-top: 0;
+    height: auto;
+    opacity: 1;
+    @include transition(opacity 1s); /*Taken fomr mixin.scss*/
+
+    a.img-link {
+      float: none !important;
+      width: 100% !important;
+      transition: none;
+
+      img {
+        height: 200px !important;
+        transition: none;
+      }
+    }
+
+    .info {
+      width: 100%;
+      transition: none;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      clear: both;
+      padding: 0 2% 2% 2%;
+      float: none;
+      height: auto;
+
+      h2 {
+        font: {
+          family:$primary-font;
+         	weight: normal;
+        }
+      	@include size(20, 25);
+        transition: none;
+      }
+
+      a {
+        color: white !important;
+      }
+
+      .date-author {
+        display: block !important;
+      }
+    } /*Close .info*/
+  } /*Close .show*/
+}/*Close #article*/
+
+#no-results {
+  display:none;
+  padding: 2% 0;
+}
+
+.weather-widget-io {
+  float: right !important;
+  width: 31% !important;
+  margin: 10px 2% 10px 0px !important;
+  height: 520px !important;
+  padding: 0px !important;
+  overflow: hidden !important;
+}
