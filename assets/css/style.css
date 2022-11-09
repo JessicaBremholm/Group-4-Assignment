@@ -523,17 +523,21 @@ body {
   }
 }
 
-/* Map */
-            .mapouter, .gmap_canvas {
-              display: block;
- margin-left: auto;
- margin-right: auto;
- width: 90%;
-            }
-
 /*------FOOTER-----*/
 #footer {
   width: 100%;
+}
+
+.hero-banner__img {
+  object-fit: cover;
+  width: 1440px;
+  height: 387px;
+}
+
+.img-portrait {
+  object-fit: cover;
+  width: 175px;
+  height: 290px;
 }
 
 /*# sourceMappingURL=style.css.map */
