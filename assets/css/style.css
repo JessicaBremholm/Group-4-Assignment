@@ -485,14 +485,19 @@ article#article.show .info .date-author {
 
 .hero-banner__img {
   object-fit: cover;
-  width: 1440px;
-  height: 387px;
+  width: 100vw;
+  height: 50vh;
 }
 
-.img-portrait {
+.portrait__img {
   object-fit: cover;
   width: 175px;
   height: 290px;
+}
+
+.portrait {
+  display: block;
+  text-align: center;
 }
 
 /*Articles SASS file*/
