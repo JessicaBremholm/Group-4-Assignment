@@ -140,7 +140,7 @@ a {
   /*Taken fomr mixin.scss*/
   cursor: pointer;
 }
-a:hover, a:active, a:visited {
+a:hover, a:active {
   color: #16315e;
   text-decoration: none;
 }
@@ -481,6 +481,23 @@ article#article.show .info .date-author {
   height: 520px !important;
   padding: 0px !important;
   overflow: hidden !important;
+}
+
+.hero-banner__img {
+  object-fit: cover;
+  width: 100vw;
+  height: 50vh;
+}
+
+.portrait__img {
+  object-fit: cover;
+  width: 175px;
+  height: 290px;
+}
+
+.portrait {
+  display: block;
+  text-align: center;
 }
 
 /*Articles SASS file*/

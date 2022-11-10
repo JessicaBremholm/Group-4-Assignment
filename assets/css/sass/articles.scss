@@ -198,3 +198,21 @@ article#article {
   padding: 0px !important;
   overflow: hidden !important;
 }
+
+.hero-banner__img {
+	object-fit: cover;
+  width: 100vw;
+  height: 50vh;
+}
+
+.portrait__img {
+	object-fit: cover;
+	width: 175px;
+	height: 290px;
+}
+
+.portrait {
+  display: block;
+  text-align: center;
+}
+
