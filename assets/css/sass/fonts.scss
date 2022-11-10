@@ -80,8 +80,8 @@ a {
   cursor:pointer;
 
   &:hover,
-  &:active,
-  &:visited {
+  &:active
+  {
   	color:$link-hover;
   	text-decoration:none;
   }
