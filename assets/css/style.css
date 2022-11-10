@@ -483,6 +483,18 @@ article#article.show .info .date-author {
   overflow: hidden !important;
 }
 
+.hero-banner__img {
+  object-fit: cover;
+  width: 1440px;
+  height: 387px;
+}
+
+.img-portrait {
+  object-fit: cover;
+  width: 175px;
+  height: 290px;
+}
+
 /*Articles SASS file*/
 body {
   width: 100%;
@@ -526,18 +538,6 @@ body {
 /*------FOOTER-----*/
 #footer {
   width: 100%;
-}
-
-.hero-banner__img {
-  object-fit: cover;
-  width: 1440px;
-  height: 387px;
-}
-
-.img-portrait {
-  object-fit: cover;
-  width: 175px;
-  height: 290px;
 }
 
 .mapouter {
