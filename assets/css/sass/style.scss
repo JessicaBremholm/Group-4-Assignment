@@ -58,6 +58,18 @@ body {
 	width: 100%;
 }
 
+.hero-banner__img {
+	object-fit: cover;
+	width: 1440px;
+	height: 387px;
+}
+
+.img-portrait {
+	object-fit: cover;
+	width: 175px;
+	height: 290px;
+}
+
 .mapouter {
 	position: relative;
 	text-align: right;
