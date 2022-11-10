@@ -140,7 +140,7 @@ a {
   /*Taken fomr mixin.scss*/
   cursor: pointer;
 }
-a:hover, a:active, a:visited {
+a:hover, a:active {
   color: #16315e;
   text-decoration: none;
 }
@@ -483,6 +483,23 @@ article#article.show .info .date-author {
   overflow: hidden !important;
 }
 
+.hero-banner__img {
+  object-fit: cover;
+  width: 100vw;
+  height: 50vh;
+}
+
+.portrait__img {
+  object-fit: cover;
+  width: 175px;
+  height: 290px;
+}
+
+.portrait {
+  display: block;
+  text-align: center;
+}
+
 /*Articles SASS file*/
 body {
   width: 100%;
@@ -523,18 +540,23 @@ body {
   }
 }
 
-/* Map */
-            .mapouter, .gmap_canvas {
-              display: block;
- margin-left: auto;
- margin-right: auto;
- width: 90%;
-            }
-
 /*------FOOTER-----*/
 #footer {
   width: 100%;
 }
 
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 287px;
+  width: 2000px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 287px;
+  width: 1181px;
+}
 
 /*# sourceMappingURL=style.css.map */
