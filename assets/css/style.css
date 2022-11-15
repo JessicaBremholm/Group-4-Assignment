@@ -549,7 +549,6 @@ body {
   position: relative;
   text-align: right;
   height: 287px;
-  width: 2000px;
 }
 
 .gmap_canvas {
@@ -557,6 +556,9 @@ body {
   background: none !important;
   height: 287px;
   width: 1181px;
+  display: block;
+  margin: 0px auto;
+  text-align: center;
 }
 
 .icon__img {
