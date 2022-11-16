@@ -214,7 +214,14 @@ article#article {
 	object-fit: cover;
 	width: 175px;
 	height: 290px;
+  filter: grayscale(100%);
+  transition: all 0.25s ease-in-out;
+
 }
+
+//.portrait__img--grey {
+//  filter: grayscale(0%)
+//}
 
 .portrait {
   display: block;

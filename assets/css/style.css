@@ -498,6 +498,8 @@ article#article.show .info .date-author {
   object-fit: cover;
   width: 175px;
   height: 290px;
+  filter: grayscale(100%);
+  transition: all 0.25s ease-in-out;
 }
 
 .portrait {
