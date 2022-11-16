@@ -69,9 +69,8 @@ body {
 	overflow: hidden;
 	background: none !important;
 	height: 287px;
-	width: 1181px;
+	width: 100%;
 	display: block;
-
 	text-align: center;
   }
 
@@ -82,4 +81,12 @@ body {
 
 .page-content {
 	margin: 0 10%;
+}
+
+body {
+	padding: 0;
+}
+
+footer {
+	margin-top: 40px;
 }
