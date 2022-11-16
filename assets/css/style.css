@@ -497,7 +497,8 @@ article#article.show .info .date-author {
 
 .portrait__img {
   object-fit: cover;
-  width: 175px;
+  width: 100%;
+  max-width: 175px;
   height: 290px;
   filter: grayscale(100%);
   transition: all 0.25s ease-in-out;
@@ -547,7 +548,8 @@ body {
   html.touch *:hover {
     pointer-events: none !important;
   }
-  html, body {
+  html,
+body {
     width: 100% !important;
     margin: 0px !important;
     overflow-x: hidden !important;
@@ -569,11 +571,12 @@ body {
   }
 }
 
-/*------FOOTER-----*/
-#footer {
-  width: 100%;
+/*Removed bootstrap padding*/
+body {
+  padding: 0;
 }
 
+/*Google Map*/
 .mapouter {
   position: relative;
   text-align: right;
@@ -590,21 +593,27 @@ body {
   text-align: center;
 }
 
+/*End of Google Map*/
+/*Icons*/
 .icon__img {
   padding: 5px;
 }
 
+/*Added margin on sides for entire page*/
 .page-content {
   margin: 0 10%;
 }
 
-body {
-  padding: 0;
+/*Footer*/
+#footer {
+  width: 100%;
 }
 
 footer {
   margin-top: 40px;
   padding-bottom: 35px;
 }
+
+/*End of Footer*/
 
 /*# sourceMappingURL=style.css.map */

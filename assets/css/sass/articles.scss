@@ -212,7 +212,8 @@ article#article {
 
 .portrait__img {
 	object-fit: cover;
-	width: 175px;
+  width: 100%; 
+	max-width: 175px;
 	height: 290px;
   filter: grayscale(100%);
   transition: all 0.25s ease-in-out;
