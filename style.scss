@@ -62,7 +62,6 @@ body {
 	position: relative;
 	text-align: right;
 	height: 287px;
-	margin: 60px auto 75px auto;
 }
 
 .gmap_canvas {
@@ -71,15 +70,11 @@ body {
 	height: 287px;
 	width: 1181px;
 	display: block;
-
+	margin: 50px auto;
 	text-align: center;
   }
 
 .icon__img {
 	padding: 5px;
-
 }
 
-.page-content {
-	margin: 0 10%;
-}
