@@ -3,7 +3,7 @@ Name: Google News SASS
 Version: 1.0
 */
 
-@import "colors.scss"; /*Colors SASS file*/ 
+@import "colors.scss"; /*Colors SASS file*/
 @import "mixin.scss"; /*Mixin SASS file*/
 @import "fonts.scss"; /*Fonts SASS file*/
 @import "header.scss"; /*Header SASS file*/
@@ -16,64 +16,82 @@ body {
   clear: both;
   padding: 1%;
   box-sizing: border-box;
-	font-family:$primary-font;
-	font-size:13pt;
-	color:black;
+  font-family: $primary-font;
+  font-size: 13pt;
+  color: black;
 }
 
-@media screen and (max-width : 1024px) {
+@media screen and (max-width: 1024px) {
+  /*All Devices*/
 
-	/*All Devices*/
+  html.touch *:hover {
+    pointer-events: none !important;
+  }
 
-	html.touch *:hover {
-    	pointer-events: none !important;
-	}
+  html,
+  body {
+    width: 100% !important;
+    margin: 0px !important;
+    overflow-x: hidden !important;
+    -webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
+  }
 
-	html, body {
-		width:100% !important;
-		margin:0px !important;
-		overflow-x:hidden !important;
-		-webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
-	}
-
-	body {
-		margin: 0 0 20px;
-		height:auto;
-		min-height:100%;
-	}
+  body {
+    margin: 0 0 20px;
+    height: auto;
+    min-height: 100%;
+  }
 }
 
 #content {
   width: 80%;
   margin: 0 auto;
 
-  @media (max-width : 870px) {
+  @media (max-width: 870px) {
     width: 100%;
   }
 }
-
-/*------FOOTER-----*/
-
-#footer {
-	width: 100%;
-}
-
-.mapouter {
-	position: relative;
-	text-align: right;
-	height: 287px;
-}
-
-.gmap_canvas {
-	overflow: hidden;
-	background: none !important;
-	height: 287px;
-	width: 1181px;
-	display: block;
-	margin: 0px auto;
-	text-align: center;
+/*Removed bootstrap padding*/
+body {
+	padding: 0;
   }
 
-.icon__img {
-	padding: 5px;
+/*Google Map*/
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 287px;
+  margin: 60px auto 75px auto;
 }
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 287px;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+/*End of Google Map*/
+
+
+/*Icons*/
+.icon__img {
+  padding: 5px;
+}
+
+/*Added margin on sides for entire page*/
+.page-content {
+  margin: 0 10%;
+}
+
+
+/*Footer*/
+#footer {
+	width: 100%;
+  }
+  footer {
+	margin-top: 40px;
+	padding-bottom: 35px;
+  }
+  /*End of Footer*/
+  
