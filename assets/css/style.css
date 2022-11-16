@@ -151,6 +151,7 @@ a:hover, a:active {
   margin: -2% -1% 0 -1%;
   width: 102%;
   height: 100px;
+  padding-top: 20px;
   overflow: hidden;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   background: white;
